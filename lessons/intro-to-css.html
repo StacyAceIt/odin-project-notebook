@@ -35,46 +35,80 @@
         
         <h2>HTML Selectors</h2>
         <h2>4 Types of Selectors:</h2>
-        <ul>
-            <li>Universal selector:
-                <ul>
-                    <li>Begin with a star</li>
-                    <li><code>* {property : value; }</code></li>
-                </ul>
-            </li>
-            <li>Type selector:
-                <ul>
-                    <li>Begin with element name</li>
-                    <li><code>elementName {property : value; }</code></li>
-                </ul>
-            </li>
-            <li>Class selector:
-                <ul>
-                    <li>Begin with a period</li>
-                    <li><code>.className {property : value; }</code></li>
-                    <li>Several elements can belong to one class.</li>
-                    <li>One element can have multiple classes.
+        <h3>
+            <strong>
+                <ol>
+                    <li>Universal selector:
                         <ul>
-                            <li><code>class = "class-1 class-2"</code></li>
+                            <li>Begin with a star</li>
+                            <li><code>* {property : value; }</code></li>
                         </ul>
                     </li>
-                </ul>
-            </li>
-            <li>ID selector:
-                <ul>
-                    <li>Begin with a hashtag</li>
-                    <li><code>#ID {property : value; }</code></li>
-                    <li>One ID can only be used once on one HTML page</li>
-                    <li>Use case: having links redirect to a section on the current page</li>
-                </ul>
-            </li>
-        </ul>
+                    <li>Type selector:
+                        <ul>
+                            <li>Begin with element name</li>
+                            <li><code>elementName {property : value; }</code></li>
+                        </ul>
+                    </li>
+                    <li>Class selector:
+                        <ul>
+                            <li>Begin with a period</li>
+                            <li><code>.className {property : value; }</code></li>
+                            <li>Several elements can belong to one class.</li>
+                            <li>One element can have multiple classes.
+                                <ul>
+                                    <li><code>class = "class-1 class-2"</code></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>ID selector:
+                        <ul>
+                            <li>Begin with a hashtag</li>
+                            <li><code>#ID {property : value; }</code></li>
+                            <li>An unique ID can only be used once on the same HTML page</li>
+                            <li>Use case: having links redirect to a section on the current page</li>
+                        </ul>
+                    </li>
+                </ol>
+            </strong>
+        </h3>
         
-        <h2>3 Ways to Use Selectors</h2>
-        <ul>
-            <li>The grouping selector</li>
-            <li>Chaining selector</li>
-        </ul>
+        <h2>3 Ways to Combine Selectors</h2>
+        <h3>
+            <strong>
+                <ol>
+                    <li>The Grouping Selector: to group the same declarations of selector1 and selector2</li>
+                        <ul>
+                            <li>selector1, <br></li>
+                                selector2 {<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color: white; <br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color: black; <br>
+
+                                } </li>
+                        </ul>
+                    <li>Chaining Selector</li>
+                        <ul>
+                            <li>
+                                selector1, selector2 {<br>
+                                    &nbsp&nbsp&nbsp&nbsp color: red; <br>
+
+                                } <br>
+
+                            </li>
+                            <li>color:red will apply to any elements that both have selector1 and selector2</li>
+                            <li>This syntax works for any combo of selectors except for chaining more than 1 type selectors,
+                                because one element cannot have two type selectors at the same time.
+                            </li>
+                        </ul>
+                    <li>Descendant Combinator</li>
+                        <ul>
+                            <li></li>
+                        </ul>
+
+                </ol>
+            </strong>
+        </h3>
 
         <a href="">Next Lesson</a>
         <!-- <a href="">Previous Lesson</a> -->
