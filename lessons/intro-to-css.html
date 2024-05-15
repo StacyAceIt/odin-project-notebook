@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .content-container {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; /* Ensures that the children are stacked vertically */
+          align-items: center; /* Centers the items horizontally */
+        }
+        img {
+          max-width: 80%; /* Makes the image responsive */
+          height: auto; /* Maintains the aspect ratio */
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; /* Adjusts the width for smaller screens */
+            }
+            img {
+                max-width: 80%; /* Adjusts image size for smaller screens */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to CSS</title>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Intro to CSS</h1>
+        
+        <h2>HTML Selectors</h2>
+        <h2>4 Types of Selectors:</h2>
+        <ul>
+            <li>Universal selector:
+                <ul>
+                    <li>Begin with a star</li>
+                    <li><code>* {property : value; }</code></li>
+                </ul>
+            </li>
+            <li>Type selector:
+                <ul>
+                    <li>Begin with element name</li>
+                    <li><code>elementName {property : value; }</code></li>
+                </ul>
+            </li>
+            <li>Class selector:
+                <ul>
+                    <li>Begin with a period</li>
+                    <li><code>.className {property : value; }</code></li>
+                    <li>Several elements can belong to one class.</li>
+                    <li>One element can have multiple classes.
+                        <ul>
+                            <li><code>class = "class-1 class-2"</code></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>ID selector:
+                <ul>
+                    <li>Begin with a hashtag</li>
+                    <li><code>#ID {property : value; }</code></li>
+                    <li>One ID can only be used once on one HTML page</li>
+                    <li>Use case: having links redirect to a section on the current page</li>
+                </ul>
+            </li>
+        </ul>
+        
+        <h2>3 Ways to Use Selectors</h2>
+        <ul>
+            <li>The grouping selector</li>
+            <li>Chaining selector</li>
+        </ul>
+
+        <a href="">Next Lesson</a>
+        <!-- <a href="">Previous Lesson</a> -->
+        <a href="../index.html">Home</a>
+    </div>
+</body>
+</html>
