@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .content-container {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; /* Ensures that the children are stacked vertically */
+          align-items: center; /* Centers the items horizontally */
+        }
+        img {
+          max-width: 80%; /* Makes the image responsive */
+          height: auto; /* Maintains the aspect ratio */
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; /* Adjusts the width for smaller screens */
+            }
+            img {
+                max-width: 80%; /* Adjusts image size for smaller screens */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Cascade</title>
+</head>
+<body>
+    <div class="content-container">
+        <h1>The Cascade of CSS</h1>
+            <h2>Specificity</h2>
+                <h3>
+                    <strong>
+                        <ol>
+                            <li>Specificity order: ID > class > type > universal</li>
+                            <li>Having a smaller quantity of a more specific type > having greater quantity of a less specific type</li>
+                            <li>Combinators don't add specificity.</li>
+                                <h4>Combinators:
+                                    <strong>
+                                        <ol>
+                                            <li>+ (Adjacent Sibling Combinator): Selects an element that is directly after another specific element at the same level in the HTML hierarchy. For example, p + span will select a span that immediately follows a p.</li>
+                                            <li>~ (General Sibling Combinator): Selects all elements that follow a specified element at the same level. For instance, p ~ span will select all span elements that follow a p, regardless of their proximity.</li>
+                                            <li>> (Child Combinator): Selects direct child elements. For example, div > p targets all p elements that are direct children of a div.</li>
+                                        </ol>
+                                    </strong>
+                                </h4>
+                        </ol>
+                    </strong>
+                </h3>
+            <h2>Inheritance</h2>
+            <h3>
+                <strong>
+                    <ol>
+                        <li>Typography-based properties (color, font-size, font-family) are usually inherited. 
+                            Most other properties aren't.
+                        </li>
+                        <li>A rule directly targeting a child element is the exception of inheritance. </li>
+                    </ol>
+                </strong>
+            </h3>
+            <h2>Rule Order</h2>
+            <h3>
+                <strong>
+                    <ol>
+                        <li>Rules defined at the end are the winner.</li>
+                    </ol>
+                </strong>
+            </h3>
+            
+        <a href="">Next Lesson: </a>
+        <a href="./intro-to-css.html">Previous Lesson: Intro to CSS</a>
+        <a href="../index.html">Home</a>
+    </div>
+</body>
+</html>
