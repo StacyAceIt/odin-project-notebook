@@ -1,0 +1,34 @@
+/* flex containers */
+.flex-container,
+.flex-container2,
+.b{
+    background-color: aqua;
+    padding: 12px;
+    border: 4px solid blue;
+    /* display: flex displays element as a flex container */
+    display: flex; 
+  }
+  
+  /* this selector selects all divs inside of .flex-container */
+  /* flex items */
+  .flex-container div,
+  .flex-container2 div,
+  .flex-container div .children  {
+    background-color: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: 1;
+    margin: 4px;
+  }
+  .flex-container div .children{
+
+    background-color: red;
+    height: 70px;
+    flex: 10;
+
+  }
+
+
+  
+
+

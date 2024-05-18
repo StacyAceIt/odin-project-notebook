@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+        .content-container {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; /* Ensures that the children are stacked vertically */
+          align-items: center; /* Centers the items horizontally */
+        }
+        img {
+          max-width: 80%; /* Makes the image responsive */
+          height: auto; /* Maintains the aspect ratio */
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; /* Adjusts the width for smaller screens */
+            }
+            img {
+                max-width: 80%; /* Adjusts image size for smaller screens */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class = "flex-container">
+        <div class = "a"></div>
+        <div class = "b">Chosen flex item as a flex container
+            <div class = "children">flex item</div>
+            <div class = "children">flex item2</div>
+
+        </div>
+        <div class = "c"></div>
+        <div class = "d"></div>
+    </div>
+
+    <div class = "flex-container2">
+        <div class = "aa"></div>
+        <div class = "bb"></div>
+        <div class = "cc"></div>
+    </div>
+
+    <div class="content-container">
+        <h1></h1>
+            <h2>What's the difference between a flex container and a flex item?</h2>
+            <h3>
+                <strong>
+                    <ol>
+                        <li>A flex container is any element with display:flex on it.</li>
+                        <li>A flex item is any element that lives directly inside of a flex container.</li>
+                        <li>An element can be both a flex container and a flex item.</li>
+                    </ol>
+                    
+                </strong>
+            </h3>
+            <h2>How do you create a flex item?</h2>
+            <h3>
+                <strong>
+                    <ol>
+                        <li>Put display: flex on a flex item.</li>
+                        <li>Then, use flexbox to arrange its children.</li>
+
+                    </ol>
+                    
+                </strong>
+            </h3>
+        <a href="../growing-and-shrinking/growing-and-shrinking.html">Next Lesson: growing-and-shrinking</a>
+        <a href="../block-and-inline/block-and-inline.html">Previous Lesson:  block-and-inline</a>
+        <a href="../index.html">Home</a>
+    </div>
+
+
+
+</body>
+</html>

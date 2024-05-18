@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .content-container {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; /* Ensures that the children are stacked vertically */
+          align-items: center; /* Centers the items horizontally */
+        }
+        img {
+          max-width: 80%; /* Makes the image responsive */
+          height: auto; /* Maintains the aspect ratio */
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; /* Adjusts the width for smaller screens */
+            }
+            img {
+                max-width: 80%; /* Adjusts image size for smaller screens */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="content-container">
+        <h1></h1>
+            <h2>What's the difference between block vs inline?</h2>
+            <h3>
+                <strong>display: block;
+                    <li>You can set width and height for block elements. </li>
+                    <li>Block elements (display: block) will appear on the page
+                        stacked atop each other.
+                    </li>
+                    <li>Each new element starting on a new line and occupies the full width available.</li>
+                    
+                </strong>            
+            </h3>
+            <h3>
+                <strong>display: inline;
+                    <li>You can set width or height for inline elements. It occupies as much width as necessary.</li>
+                    <li>It doesn't start on a new line.</li>
+                    <li>Inline elements appear in line with whatever elements they are place beside.</li>
+                    <li>Padding and margin behave differently with inline elements. 
+                        You don't want to add extra padding or margin on inline elements.
+                    </li>
+
+                </strong>
+            </h3>
+            <h3>
+                <strong>display: inline-block;
+                    <li>It doesn't start on a new line.</li>
+                    <li>You can set height and width for inline-block elements.</li>
+                    <li>Behave like inline elements, but with block style padding and margin.</li>
+                </strong>
+            </h3>
+        <a href="../intro-to-flexbox/intro-to-flexbox.html">Next Lesson: intro-to-flexbox </a>
+        <a href="../lessons/inspecting-html-and-css.html">Previous Lesson: inspecting-html-and-css</a>
+        <a href="../index.html">Home</a>
+    </div>
+</body>
+</html>
