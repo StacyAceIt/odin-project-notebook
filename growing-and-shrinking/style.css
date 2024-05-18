@@ -1,0 +1,49 @@
+.nav-list,
+.nav-list2{
+    display: flex;
+    margin: 100;
+    padding: 0;
+    list-style: none;
+    border: var(--border-width) solid hsl(100, 50%, 50%);
+    background-color: hsl(100, 50%, 90%);
+    padding: 10px;
+    /* the larger the radius, the rounder the corners */
+    border-radius: 10px;
+    
+}
+
+.nav-list {
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Style each li element */
+.nav-list li{
+    /* width: max-content; */
+    margin: 0 5px; /* Add some margin between li elements */
+    /* border: var(--border-width) solid hsl(100, 50%, 50%); */
+    background-color: hsl(100, 50%, 80%); /* Background color for each li element */
+    padding: 10px; /* Add padding to make the boxes larger */
+    border-radius: 5px; /* Optional: Add rounded corners to li elements */
+    flex-shrink: 1;
+    flex-grow: 1;
+    
+}
+
+.nav-list2 li {
+    width: max-content;
+    margin: 0 5px; /* Add some margin between li elements */
+    /* border: var(--border-width) solid hsl(100, 50%, 50%); */
+    background-color: hsl(100, 50%, 80%); /* Background color for each li element */
+    padding: 10px; /* Add padding to make the boxes larger */
+    border-radius: 5px; /* Optional: Add rounded corners to li elements */
+
+}
+
+header {
+    --border-width: 5px;
+}
+
+
+
+
