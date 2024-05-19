@@ -1,13 +1,71 @@
+.shrink0,
+.shrink1,
+.shrink2{
+    display: flex;
+}
+
+.shrink0 div,
+.shrink1 div,
+.shrink2 div{
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    width: 250px;
+    flex: 1 1 auto;
+}
+
+.shrink0 .b{
+    
+    flex-shrink: 0;
+}
+
+.shrink1 .b1{
+    flex-shrink: 1;
+}
+
+.shrink2 .b2{
+    flex-shrink: 2;
+}
+
+.flex-container0,
+.flex-container,
+.flex-container2 {
+    display: flex;
+  }
+
+  .flex-container0 div{
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: 0 1 0%;
+  }
+  
+  /* this selector selects all divs inside of .flex-container */
+  .flex-container div,
+  .flex-container2 div {
+    background: peachpuff;
+    border: 4px solid brown;
+    height: 100px;
+    flex: 1 1 0%;
+  }
+  
+  /* only div.two is selected here */
+  .flex-container .two {
+    flex: 2 1 0%;
+  }
+
+
 .nav-list,
 .nav-list2{
     display: flex;
+    justify-content: space-between;
     margin: 100;
     padding: 0;
     list-style: none;
     border: var(--border-width) solid hsl(100, 50%, 50%);
     background-color: hsl(100, 50%, 90%);
     padding: 10px;
-    /* the larger the radius, the rounder the corners */
+
     border-radius: 10px;
     
 }
@@ -17,14 +75,14 @@
     flex-wrap: wrap;
 }
 
-/* Style each li element */
+
 .nav-list li{
-    /* width: max-content; */
-    margin: 0 5px; /* Add some margin between li elements */
-    /* border: var(--border-width) solid hsl(100, 50%, 50%); */
-    background-color: hsl(100, 50%, 80%); /* Background color for each li element */
-    padding: 10px; /* Add padding to make the boxes larger */
-    border-radius: 5px; /* Optional: Add rounded corners to li elements */
+    
+    margin: 0 5px; 
+    
+    background-color: hsl(100, 50%, 80%);
+    padding: 10px; 
+    border-radius: 5px;
     flex-shrink: 1;
     flex-grow: 1;
     
@@ -32,11 +90,11 @@
 
 .nav-list2 li {
     width: max-content;
-    margin: 0 5px; /* Add some margin between li elements */
-    /* border: var(--border-width) solid hsl(100, 50%, 50%); */
-    background-color: hsl(100, 50%, 80%); /* Background color for each li element */
-    padding: 10px; /* Add padding to make the boxes larger */
-    border-radius: 5px; /* Optional: Add rounded corners to li elements */
+    margin: 0 5px;
+    
+    background-color: hsl(100, 50%, 80%); 
+    padding: 10px;
+    border-radius: 5px; 
 
 }
 
@@ -46,4 +104,4 @@ header {
 
 
 
-
+ 
