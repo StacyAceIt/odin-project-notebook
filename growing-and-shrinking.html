@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        
+        h3 {
+            font-weight: bold;
+        }
+        
+        .content-container {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; 
+          align-items: center; 
+        }
+        * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  }
+  
+  .parent {
+    background-color: #001f3f;
+    display: flex;
+    padding: 20px;
+  }
+  
+  .child {
+    background-color: #0074d9;
+    padding: 20px;
+    color: white;
+  }
+  
+  .child-three {
+    /* flex: 0 1 1000px; */
+    flex-grow: 3;
+    background: #ff851b;
+  }
+        img {
+          max-width: 80%; 
+          height: auto; 
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; 
+            }
+            img {
+                max-width: 80%; 
+        }}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>growing-and-shrinking</title>
+</head>
+<body>
+    <div class="content-container">
+        <h1>growing-and-shrinking</h1>
+        <h2>What are the 3 values defined in the shorthand flex property? (e.g. flex: 1 1 auto)</h2>
+        <h3>
+            <ol>
+                <li>flex-grow: the one with flex-grow value n takes n times more space than others.</li>
+                <li>flex-shrink: if there is enough space, each element will not shrink. But when space is not enough, the one with greater flex-shrink value shrinks more.</li>
+                <li>flex-grow and flex-shrink don't respect preset width.</li>
+                <li>flex-basis</li>
+            </ol>
+        </h3>
+        <h2>What is flex: auto;?</h2>
+        <h3>
+            <ul>
+                <li>flex: auto is equivalent to flex: 1 1 auto</li>
+                <li>flex: auto (flex: 1 1 auto) respects the content size or specified dimensions before distributing remaining space.</li>
+            </ul>
+            
+        </h3>
+        <h2>What does div {flex : 1 ; } stand for?</h2>
+        <h3>
+            <ul>
+                <li>flex: 1 1 0</li>
+                <li>flex: 1 (flex: 1 1 0) ensures equal distribution of space without considering the content size.</li>
+                <li>flex-grow: 1</li>
+                <li>flex-shrink: 1</li>
+                <li>flex-basis: 0</li>
+            </ul>
+            
+        </h3>
+        <h2>What are the 3 implicit values for display: flex in the container?</h2>
+        <h3>
+            <ul>
+                <li>for each child element: </li>
+                <li>flex: 0 1 auto; </li>
+                <li>flex-grow: 0 means the element will not grow. 1 means all divs will grow evenly. flex-grow: 0:
+
+                    This means that flex items will not grow to fill the available space in the flex container by default. They will only take up as much space as their content or specified width/height allows.</li>
+                <li>flex-shrink: 0 keeps divs from drinking. 1 means that all element will shrink evenly. flex-shrink: 1:
+
+                    This means that flex items are allowed to shrink if the flex container is not large enough to accommodate all the items. The items will shrink proportionally based on their flex-shrink values.
+                    </li>
+                <li>flex-basis: sets the initial size of a flex item.</li>
+            </ul>
+        </h3>
+        <h2>What happens if align-items: center; and flex-grow: 2; are applied to the same element?</h2>
+        <h3>
+            <li>flex-grow: 2; will be ignored when align-items: center; is applied. Avoid applying these two to the same element.</li>
+        </h3>
+        <h2>What is the default value of flex-basis?</h2>
+        <h3>
+            <ul>
+                <li>The default value of flex-basis is auto.</li>
+                <li>When the flex-basis property is set to auto, the size of the flex item is based on its content, width/height properties, or the intrinsic size of the element, whichever is defined.</li>
+                <li>This means the flex item will take up space according to its content or any explicit width/height values, and then the remaining space will be distributed according to the flex-grow and flex-shrink properties.</li>
+
+            </ul>
+        </h3>
+        <h2>What are the differences between flex-basis: 0%; vs flex:basis: auto;?</h2>
+        <h3>
+            <ul>flex-basis: 0%
+                <li>Initial Size is Zero: The flex item will start with a size of zero before any additional space distribution takes place.</li>
+                <li>Space Distribution: The item will rely entirely on the flex-grow property to determine its size relative to other flex items. Since its initial size is zero, the remaining space in the container will be distributed based on the flex-grow values.
+                </li>
+            </ul>
+            <ul>flex-basis: auto;
+                <li>Initial Size Based on Content: The flex item’s initial size is based on its content or any width/height properties specified.</li>
+                <li>Default Behavior: If no flex-basis is specified, it defaults to auto.</li>
+                <li>
+                    When flex-basis is auto, the flex-shrink property adjusts the size of the flex item relative to its content size when there is not enough space in the flex container. This leads to a more intuitive and natural shrinking behavior, where larger items shrink proportionally more than smaller ones.
+
+
+                </li>
+                <li>When flex-basis is set to 0, item's width will be ignored and everything would shrink evenly. Using auto tells the item to check for a width declaration.</li>
+            </ul>
+        </h3>
+        <h2>For flex-grow, flex-shrink and flex-basis, which values respect the original content?</h2>
+        <h3>
+            <ol>
+                <li>flex-grow: 0; </li>
+                <li>flex-shrink: 0;</li>
+                <li>flex-basis: auto; only flex-basis has auto. Others don't</li>
+            </ol>
+        </h3>
+        <h2>Helpful articles</h2>
+        <h3>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/flex">live demo and all flex shorthand values</a></li>
+            </ul>
+        </h3>
+    </div>
+
+    <h1><a href="https://www.theodinproject.com/lessons/foundations-growing-and-shrinking">foundations-growing-and-shrinking</a></h1>
+    <h2>when flex-grow: 0 for all div elements:</h2>   
+    <div class="flex-container0">
+        <div class="ten"></div>
+        <div class="eleven"></div>
+        <div class="twelve"></div>
+    </div>
+    <h2>when flex-grow: 1 for all div elements:</h2>   
+    <div class="flex-container2">
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="six"></div>
+    </div>
+    <h2>when flex-grow: 2;</h2>   
+    <div class="flex-container">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+
+    <h2>when flex-shrink: 0; for center element:</h2>
+    <div class="shrink0">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+    </div>
+    <h2>when flex-shrink: 1; for center element:</h2>   
+    <div class="shrink1">
+        <div class="a"></div>
+        <div class="b1"></div>
+        <div class="c"></div>
+    </div>
+    <h2>when flex-shrink: 2; for center element</h2>   
+    <div class="shrink2">
+        <div class="a"></div>
+        <div class="b2"></div>
+        <div class="c"></div>
+    </div>
+    
+
+        <h1><a href="https://css-tricks.com/understanding-flex-grow-flex-shrink-and-flex-basis/">CSS tricks</a> </h1>
+
+
+        <div class="parent">
+            <div class="child child-one">child</div>
+            <div class="child child-two">child</div>
+            <div class="child child-three">child</div>
+          </div>
+
+        <h1>Flexbox made simple</h1>
+        <header>
+            <nav>
+                <ul class = "nav-list">
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae odio et necessitatibus dolore non accusamus enim nesciunt voluptatibus. Itaque, praesentium! Harum exercitationem numquam iusto enim officiis libero accusantium. Praesentium!</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quaerat eveniet voluptas accusamus, odit vitae animi ipsa ullam! Facilis eius eveniet voluptates autem doloremque molestiae laborum repudiandae corrupti officia voluptatem.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam assumenda aliquid placeat sed error eveniet alias vitae ex fuga molestiae sunt vero perferendis quia maiores, doloremque id quam quisquam. Totam.</a></li>
+                    <li><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex dolorem adipisci mollitia doloremque aperiam nesciunt, excepturi repellendus aspernatur praesentium tempora facilis velit odit! Perferendis velit eius rerum, eum quisquam voluptatum.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque non voluptates fugit fugiat eligendi iure adipisci asperiores perferendis, provident nesciunt qui rerum distinctio porro odio, blanditiis rem, saepe eius inventore.</a></li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+
+        <header>
+            <nav>
+                <ul class = "nav-list2">
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit beatae odio et necessitatibus dolore non accusamus enim nesciunt voluptatibus. Itaque, praesentium! Harum exercitationem numquam iusto enim officiis libero accusantium. Praesentium!</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consectetur quaerat eveniet voluptas accusamus, odit vitae animi ipsa ullam! Facilis eius eveniet voluptates autem doloremque molestiae laborum repudiandae corrupti officia voluptatem.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam assumenda aliquid placeat sed error eveniet alias vitae ex fuga molestiae sunt vero perferendis quia maiores, doloremque id quam quisquam. Totam.</a></li>
+                    <li><a href="#">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex dolorem adipisci mollitia doloremque aperiam nesciunt, excepturi repellendus aspernatur praesentium tempora facilis velit odit! Perferendis velit eius rerum, eum quisquam voluptatum.</a></li>
+                    <li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque non voluptates fugit fugiat eligendi iure adipisci asperiores perferendis, provident nesciunt qui rerum distinctio porro odio, blanditiis rem, saepe eius inventore.</a></li>
+
+                </ul>
+
+            </nav>
+
+        </header>
+        <a href="../axes/axes.html">Next Lesson: axes</a>
+        <a href="../intro-to-flexbox/intro-to-flexbox.html">Previous Lesson:  intro-to-flexbox</a>
+        <a href="../index.html">Home</a>
+    
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h3 {
+            font-weight: bold;
+        }
+        .content-container,
+        .content-container2 {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; /* Ensures that the children are stacked vertically */
+          align-items: center; /* Centers the items horizontally */
+        }
+        img {
+          max-width: 80%; /* Makes the image responsive */
+          height: auto; /* Maintains the aspect ratio */
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; /* Adjusts the width for smaller screens */
+            }
+            img {
+                max-width: 80%; /* Adjusts image size for smaller screens */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Axes</h1>
+        <h2>What is the defualt direction of a flex container?</h2>
+        <h3><ul>
+            <li>Horizontal or row, but you can change it to vertical or column</li>
+            <li>flex-direction sets the main direction. The other direction is the cross direction.</li>
+        </ul></h3>
+        <h2>In a column flex-container, what does flex-basis refer to?</h2>
+        <h3>when we changed the flex-direction to column, flex-basis refers to height instead of width.</h3>
+        <h2>In a row flex-container, what does flex-basis refer to?</h2>
+        <h3>width</h3>
+        <h2>Why do the above two questions have different answers? </h2>
+        <h3>No matter which direction you’re using, you need to think of your flex-containers as having 2 axes: the main axis and the cross axis. It is the direction of these axes that changes when the flex-direction is changed. In most circumstances, flex-direction: row puts the main axis horizontal (left-to-right), and column puts the main axis vertical (top-to-bottom).</h3>
+        
+    </div>
+
+    <h2>default flex-direction: row with auto flex-basis</h2>
+    <div class="flex-container">
+        <div class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius earum est consequatur laudantium temporibus accusantium illo omnis corporis porro, voluptate ratione odio blanditiis, expedita deleniti? Expedita facilis quo nam.</div>
+        <div class="two">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta incidunt iusto, dolores fugiat aliquam earum tenetur, autem quisquam impedit itaque nobis eveniet dignissimos quod quasi in maiores expedita reiciendis voluptas!</div>
+        <div class="three">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis libero nam doloremque quas iure quos natus corrupti eligendi beatae, esse eos perspiciatis at velit autem error dolorem, quasi ullam earum.</div>
+      </div>
+
+    <h2>flex-direction: column with auto flex-basis</h2>
+      <div class="flex-container2">
+        <div class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita facilis rerum dicta quibusdam nemo. Officiis repellat quod esse expedita molestiae nulla officia, illo quam tenetur. Minus tenetur dignissimos suscipit deleniti!</div>
+        <div class="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quam doloribus incidunt culpa asperiores repellendus numquam ut. Fugit ipsa voluptatem consequuntur, dolores blanditiis temporibus nulla distinctio placeat iure nihil voluptatum.</div>
+        <div class="three">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos amet commodi accusantium non quia fugiat at optio totam facilis laborum autem, error porro, expedita deserunt voluptatibus explicabo iure mollitia neque!</div>
+      </div>
+
+      <h2>default flex-direction: row with 0 flex-basis</h2>
+      <div class="flex-container3">
+          <div class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat esse amet hic placeat? Harum officiis amet nam eos totam. Beatae laborum expedita error nemo placeat aperiam ipsam ullam. Suscipit, fugit.</div>
+          <div class="two">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, autem. Aspernatur rerum nulla itaque nobis officia eaque quasi deleniti architecto. Assumenda modi cumque possimus earum nisi veniam ea veritatis sit?</div>
+          <div class="three">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id reprehenderit mollitia recusandae eius amet dolore vel nobis nisi beatae eum odit non nulla veniam ratione doloribus repellendus, iure nam corrupti.</div>
+        </div>
+  
+      <h2>flex-direction: column with 0 flex-basis (collapse without content)</h2>
+        <div class="flex-container4">
+          <div class="one">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus quasi, explicabo magnam qui aspernatur inventore non rem ipsam ipsum optio consequuntur, ex excepturi numquam consequatur officia totam architecto! Optio, in.</div>
+          <div class="two">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero aut harum ad magnam odit quas reprehenderit. Sint optio veniam doloremque ducimus fuga, dolor similique ratione. Minus voluptas eveniet porro sapiente!</div>
+          <div class="three">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, eos commodi. Et dolores laboriosam molestiae magnam, quod, soluta, fugiat in explicabo reprehenderit qui nostrum consequatur deleniti eos? Fuga, enim corporis.</div>
+        </div>
+
+    <h2>Why does the row direction doesn't collapse but column direction collapses?</h2>
+    <h3>
+        <ul>
+            <li>Default Width: The div will expand to fill the width of its containing block.</li>
+            <li>Default Height: The div will have a height of 0 if it is empty.</li>
+            <li>When the direction is set to row, block-level elements default to the full width of their parent div.</li>
+            <li>When changing direction to column, block-level elements default to the height of their content. In this case, there is no content.</li>
+        </ul>
+    </h3>
+
+
+
+    <div class="content-container2">
+
+            
+        <a href="../alignment/alignment.html">Next Lesson: alignment</a>
+        <a href="../growing-and-shrinking/growing-and-shrinking.html">Previous Lesson:  growing-and-shrinking</a>
+        <a href="../index.html">Home</a>
+    </div>
+
+</body>
+</html>
