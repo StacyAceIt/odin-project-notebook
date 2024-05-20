@@ -32,14 +32,134 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>alignment</title>
 </head>
 <body>
+    <div class="header">
+        <div class="left-links">
+          <ul>
+            <li><a href="#">ONE</a></li>
+            <li><a href="#">TWO</a></li>
+            <li><a href="#">THREE</a></li>
+          </ul>
+        </div>
+        <div class="logo">LOGO</div>
+        <div class="right-links">
+          <ul>
+            <li><a href="#">FOUR</a></li>
+            <li><a href="#">FIVE</a></li>
+            <li><a href="#">SIX</a></li>
+          </ul>
+        </div>
+      </div>
     <div class="content-container">
-        <h1></h1>
+        <h1>alignment</h1>
+        <h2>What's the difference between justify-content and align-items?</h2>
+        <h3>
+            <ul>
+                <li>justify-content aligns items via main axis.</li>
+                <li>align-items aligns items via cross axis.</li>
+            </ul>
+        </h3>
         
     </div>
+    <h2>without flex: 1; default for display: flex is 0 1 auto</h2>
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <h2>with flex: 1, each item grow to fill the available space.</h2>
+    <div class="container">
+        <div class="flex1 item"></div>
+        <div class="flex1 item"></div>
+        <div class="flex1 item"></div>
+    </div>
+    <h2>same width with space between. </h2>
+    <h3>
+        <ul>
+            <li>Set justify-content: space-between; to the container.</li>
+            <li>justify-content aligns items across the main axis, which is row by default.</li>
+        </ul>
+    </h3>
+    <div class="container space">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <h2>space-around</h2>
+    <div class="container around">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <h2>Set justify-content: center; to container to center boxes along main axis (row).</h2>
 
+    <div class="container center">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h2>How to change placement of items along the cross axis (column by default)?</h2>
+    <h3>
+        <ul>
+            <li>Set align-items to container</li>
+        </ul>
+    </h3>
+    <div class="container cross">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h2>When flex-direction: column, what's the default look?</h2>
+    <div class="container col">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <h2>What if we want to center horizontally?</h2>
+    <h3>
+        <ul>
+            <li>Set align-items to the container</li>
+        </ul>
+    </h3>
+    <div class="container col cross">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+    <h2>Gap lets you specity the gap between elements. It's different from justify-content: space-between.</h2>
+    <div class="container gap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h2>justify-content: space-around</h2>
+    <div class="container space-around">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+    <h2>Flex exercises</h2>
+    <h3>01-flex-center</h3>
+    <div class="outer">
+        <div class="inner">center this div</div>
+    </div>
+
+    <h3>02-flex-header</h3>
+    <div class = "a">
+        <div class = "b"><a href="">ONE</a></div>
+        <div class = "b"><a href="">TWO</a></div>
+        <div class = "b"><a href="">THREE</a></div>
+        <div class = "b logo">LOGO</div>
+        <div class = "b"><a href="">FOUR</a></div>
+        <div class = "b"><a href="">FIVE</a></div>
+        <div class = "b"><a href="">SIX</a></div>
+    </div>
 
 
 
