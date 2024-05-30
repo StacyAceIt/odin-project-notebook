@@ -32,22 +32,54 @@
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Variables and Operators</title>
 </head>
 <body>
     <div class="content-container">
         <h1>Variables and Operators</h1>
-        <h2></h2>
-        
+        <h2>Regular Expressions</h2>
+        <h2>
+            <ol>
+                <li>Creating a regular expression</li>
+                    <ol>
+                        <li>Regular expression literal</li>
+                            <ul>
+                                <code>const re = /ab+c/</code>
+                                <li>regex literals improve performance</li>
+                                <li>use regex literals if the regex remains constant</li>
+                            </ul>
+
+                        <li>Calling the constructor function of the RegExp object</li>
+                            <ul>
+                                <code>const re = new RegExp "ab+c"</code>
+                                <li>Using constructor function provides runtime compilation of the regex.</li>
+                                <li>Use the constructor function when the regex will be changing, esp. getting regex from user input.</li>
+                            </ul>
+                    </ol>
+                <li>Writing a regular expression pattern</li>
+                    <ol>
+                        <li>Using simple patterns: /abc/ to grasp abc pattern</li>
+                        <li>Using special characters /a*/ 0 or more a</li>
+                        <li>Escaping</li>
+                            <ul>
+                                <li>Escape: backward slash /a\*/ </li>
+                                <li>Regex literal: forward slash / </li>
+                                <li>Constructor function: double quotes "ab+c" </li>
+                            </ul>
+                        <li>Using parentheses</li>
+                    </ol>
+                <li>Using regular expressions in JavaScript</li>
+                <li>Examples</li>
+            </ol>
+        </h2>
     </div>
-    <script>
-        console.log("Hello, World!")
-    </script>
+
 
 
 
 
     <div class="content-container2">
+
 
             
         <a href="">Next Lesson: </a>
