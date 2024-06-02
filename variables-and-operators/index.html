@@ -37,6 +37,66 @@
 <body>
     <div class="content-container">
         <h1>Variables and Operators</h1>
+        <h2>
+            8 Data Types in JS
+        </h2>
+        <h3>
+            <ol>
+                <li>Number </li>
+                <li>BigInt</li>
+                <li>String</li>
+                    <ul>
+                        <li>Strings declared using single quotes and strings declared using double quotes are the same</li>
+                        <li>Strings declared using backticks are a special kind of string called a template literal. In most ways, template literals are like normal strings, but they have some special properties:</li>
+                            <ul>
+                                <li>You can embed JS in them</li>
+                                <li>you can declare template literals over multiple lines</li>
+                            </ul>
+                        <li>Backticks are “extended functionality” quotes. They allow us to embed variables and expressions into a string by wrapping them in ${…}</li>
+                        <code>
+                            let name = "John";
+
+                            // embed a variable
+                            alert( `Hello, ${name}!` ); // Hello, John!
+
+                            // embed an expression
+                            alert( `the result is ${1 + 2}` ); // the result is 3
+                        </code>
+                        <li>str.substr() vs str.slice() vs str.substr</li>
+                        <ul>
+                            <li>slice(startIndex, endIndex): Extracts from startIndex to endIndex (not including endIndex). Accepts negative indices.
+                            </li>
+                            <li>
+                                substr(startIndex, length): Extracts length characters from startIndex. Accepts negative startIndex.
+                            </li>
+                            <li>
+                                substring(startIndex, endIndex): Extracts from startIndex to endIndex (not including endIndex). Swaps indices if startIndex > endIndex. Treats negative indices as 0.
+                            </li>
+                        </ul>
+                    </ul>
+                <li>Boolean: true, false</li>
+                <li>The "null" value: let age = null;</li>
+                <li>The "undefined" value</li>
+                    <code>let age;</code>
+                    <code>alert(age);</code>
+                <li>Objects and Symbols: non-primitive data type. object for complex data structures</li>
+                <li>The typeof operator</li>
+            </ol>
+        
+        <h2>What are truthy and falthy values in JS?</h2>
+        <h3>Falsy
+            <ol>
+                <li>0</li>
+                <li>""</li>
+                <li>null</li>
+                <li>undefined</li>
+                <li>NaN</li>
+            </ol>
+            
+        </h3>
+
+        </h3>
+
         <h2>Regular Expressions</h2>
         <h2>
             <ol>
@@ -51,7 +111,7 @@
 
                         <li>Calling the constructor function of the RegExp object</li>
                             <ul>
-                                <code>const re = new RegExp "ab+c"</code>
+                                <code>const re = new RegExp（"ab+c"）</code>
                                 <li>Using constructor function provides runtime compilation of the regex.</li>
                                 <li>Use the constructor function when the regex will be changing, esp. getting regex from user input.</li>
                             </ul>
@@ -63,6 +123,14 @@
                         <li>Escaping</li>
                             <ul>
                                 <li>Escape: backward slash /a\*/ </li>
+                                    <ul>
+                                        <li>
+                                            both /a\*b/ and new RegExp("a\\*b") define the same pattern. They both match the character a, followed by a literal *, followed by the character b.
+                                        </li>
+                                        <li>
+                                            When using the RegExp constructor in JavaScript, you need to escape the escape character because the constructor takes a string literal as its argument. In JavaScript string literals, the backslash \ is an escape character, so you must escape it with another backslash to ensure it is treated as a literal backslash in the regular expression.
+                                        </li>
+                                    </ul>
                                 <li>Regex literal: forward slash / </li>
                                 <li>Constructor function: double quotes "ab+c" </li>
                             </ul>
@@ -72,6 +140,21 @@
                 <li>Examples</li>
             </ol>
         </h2>
+
+        <h2>
+            When to not use Regex?
+        </h2>
+        <h3>
+            <ol>
+                <li>When there are parsers.</li>
+                <li>More generally, when you have better tools to do your job.</li>
+                <li>When parsing human writing.</li>
+                <li>don't validate an e-mail address through a regular expression. In most cases, you'll do it wrong. In a rare case, you'll do it right</li>
+                <li>When you don't have the right tools or don't care about clean code.</li>
+                <li>When your code will be read. And then read again, and again and again, every time by different developers.</li>
+            </ol>
+        </h3>
+
     </div>
 
 
