@@ -3,15 +3,15 @@
 <head>
     <style>
         .content-container {
-          width: 800px;  
-          margin: 0 auto;
-          display: flex;
-          flex-direction: column; /* Ensures that the children are stacked vertically */
-          align-items: center; /* Centers the items horizontally */
+            width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column; /* Ensures that the children are stacked vertically */
+            align-items: center; /* Centers the items horizontally */
         }
         img {
-          max-width: 80%; /* Makes the image responsive */
-          height: auto; /* Maintains the aspect ratio */
+            max-width: 80%; /* Makes the image responsive */
+            height: auto; /* Maintains the aspect ratio */
         }
         body {
             font-family: 'Fantasy', Papyrus;
@@ -24,6 +24,18 @@
                 max-width: 100%; /* Adjusts image size for smaller screens */
             }
         }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,30 +44,48 @@
 <body>
     <div class="content-container">
         <h1>Odin Project Notebook</h1>
-        
-        <h2>Foundation Course</h2>
-        <h3>
-            <ol>
-                <h3>CSS</h3>
-                <li><a href="./lessons/intro-to-css.html">Intro to CSS</a></li>
-                <li><a href="./lessons/the-cascade.html">CSS Cascade</a></li>
-                <li><a href="./block-and-inline/block-and-inline.html">block-and-inline</a></li>
-                <h3>Flexbox</h3>
-                <li><a href="./intro-to-flexbox/intro-to-flexbox.html">intro-to-flexbox</a></li>
-                <li><a href="./growing-and-shrinking/growing-and-shrinking.html">growing-and-shrinking</a></li>
-                <li><a href="./axes/axes.html">axes</a></li>
-                <li><a href="./alignment/alignment.html">alignment</a></li>
-                <h3>JavaScript</h3>
-                <li><a href="./variables-and-operators/index.html">variables-and-operators</a></li>
-                <li><a href="./foundation/data-types-and-conditionals/data-types-and-conditionals.html">data-types-and-conditionals</a></li>
-                <li><a href="./foundation/function-basics/function-basics.html">function-basics</a></li>
-                <h3>Project: Rock Paper Scissors</h3>
-                <li><a href="./rock-paper-scissors/rock-paper-scissors/index.html">rock-paper-scissors</a></li>
-            </ol>
-
-        </h3>
-        
-        
+        <table>
+            <thead>
+                <tr>
+                    <th>Course Content</th>
+                    <th>Self-learning Dairies</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <h2>Foundation Course</h2>
+                        <h3>CSS</h3>
+                        <ul>
+                            <li><a href="./lessons/intro-to-css.html">Intro to CSS</a></li>
+                            <li><a href="./lessons/the-cascade.html">CSS Cascade</a></li>
+                            <li><a href="./block-and-inline/block-and-inline.html">Block and Inline</a></li>
+                        </ul>
+                        <h3>Flexbox</h3>
+                        <ul>
+                            <li><a href="./intro-to-flexbox/intro-to-flexbox.html">Intro to Flexbox</a></li>
+                            <li><a href="./growing-and-shrinking/growing-and-shrinking.html">Growing and Shrinking</a></li>
+                            <li><a href="./axes/axes.html">Axes</a></li>
+                            <li><a href="./alignment/alignment.html">Alignment</a></li>
+                        </ul>
+                        <h3>JavaScript</h3>
+                        <ul>
+                            <li><a href="./variables-and-operators/index.html">Variables and Operators</a></li>
+                            <li><a href="./foundation/data-types-and-conditionals/data-types-and-conditionals.html">Data Types and Conditionals</a></li>
+                            <li><a href="./foundation/function-basics/function-basics.html">Function Basics</a></li>
+                            <li><a href="./rock-paper-scissors/rock-paper-scissors/index.html">Project: Rock-Paper-Scissors</a></li>
+                        </ul>
+                    </td>
+                    <td>
+                        <h2>Journal Entries</h2>
+                        <ul>
+                            <li><a href="./journal/axes-journal-2024-06-21.html">Axes Course - June 21, 2024</a></li>
+                            <!-- Add more journal entries as needed -->
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </body>
 </html>
