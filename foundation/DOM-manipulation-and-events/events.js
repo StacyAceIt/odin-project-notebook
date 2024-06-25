@@ -18,3 +18,23 @@ btn4.onclick = alertFunction;
 
 const btn5 = document.querySelector("#btn5");
 btn5.addEventListener("click", alertFunction);
+
+const btn6 = document.querySelector("#btn6");
+btn6.addEventListener("click", function(e){
+    console.log(e.target);
+    
+    alert("Hello World");
+    e.target.style.background = "blue";
+    
+});
+
+const buttons = document.querySelectorAll(".click-me");
+buttons.forEach((button) =>{
+    button.addEventListener("click", () =>{
+        alert(button.id);
+    }
+
+    )
+}
+
+);

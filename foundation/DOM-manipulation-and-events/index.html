@@ -42,7 +42,36 @@
         <h3>DOM is a tree like tree-like representation of the contents of a webpage.</h3>
         <h2>How do you target the nodes you want to work with?</h2>
         <h3>Use selectors</h3>
-        
+        <h2>How do events and listeners work?</h2>
+        <h3>
+            <ol>
+                <li>Events are actions that occur to your webpage. Examples: </li>
+                <ul>
+                    <li>mouse clicks</li>
+                    <li>key presses</li>
+                </ul>
+                <li>Using JavaScript, we can make our webpage listen to and react to these events.</li>
+
+            </ol>
+        </h3>
+        <h2>What are 3 ways to use events in your code?</h2>
+        <h3>
+            <ol>
+                <li>specify <h2><i>function attributes</i></h2> directly on HTML elements. &lt button onclick = "alert('Hi')" &gt</li>
+                <li>set <h2><i> properties</i></h2> on DOM nodes. e.g. btn.onclick = () => alert('Hi')</li>
+                <li>attach <h2><i>event listeners</i></h2> to DOM nodes. e.g. btn.addEventListeners("actionAsString", function);</li>
+            </ol>
+        </h3>
+        <h2>Why are event listeners the preferred way to handle events?</h2>
+        <h3><ol>
+            <li>Separation of concerns:  Using event listeners keeps your HTML clean and free from JavaScript code, which makes it easier to read and maintain.</li>
+            <li>Maintainability and Modularity.</li>
+            <li>You can attach multiple event handlers to a single event without overwriting existing ones. This is not possible when using inline event handlers.</li>
+            <li>Event listeners can be removed easily using the removeEventListener method, providing better control over event handling.</li>
+            <li>Event listeners provide more control over event handling, such as specifying whether to use the capturing or bubbling phase.</li>
+            <li>Event listeners can be reused across multiple elements or dynamically added and removed as needed.
+            </li>
+        </ol></h3>
     </div>
 
 
