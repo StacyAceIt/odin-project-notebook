@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple DOM example</title>
+    <style>
+        .highlight{
+            color: white;
+            background-color: black;
+            padding: 10px;
+            width: 250px;
+            text-align: center;
+        }
+    </style>
   </head>
   <body>
       <section>
@@ -16,16 +25,23 @@
         link.href = "https://developer.mozilla.org/";
         const sect = document.querySelector("section");
         const para = document.createElement("p");
-        para.textContent = "(inserted p)We hope you enjoyed the ride.";
+        para.textContent = "We hope you enjoyed the ride.";
         // sect.insertBefore(para, sect.firstChild);
         sect.insertBefore(para, sect.children[0])
         // sect.appendChild(para); 
         const text = document.createTextNode(
-            "linkPara text (this will be inserted after the first p element)The premier source for web development knowledge."
+            "The premier source for web development knowledge."
         );
         const linkPara = document.querySelector('p');
         linkPara.appendChild(text);
-        // sect.appendChild(linkPara);
+        sect.appendChild(linkPara);
+        // sect.removeChild(linkPara);
+        // para.style.color = "white";
+        // para.style.backgroundColor = "black";
+        // para.style.padding = "10px";
+        // para.style.width = "250px";
+        // para.style.textAlign = "center";
+        para.setAttribute("class", "highlight");
       </script>
   </body>
 </html>
