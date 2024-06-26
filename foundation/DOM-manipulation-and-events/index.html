@@ -125,125 +125,180 @@
         <h3>only prevents the event from propagating further in bubbling phase</h3>
     </div>
 
-    <h2>What events occur in sequence when you open a webpage?</h2>
-    <h3><ol>
-        <li>DOMContentLoaded: </li>
-        <ol>
-            <li>HTML is fully loaded.</li>
-            <li>DOM tree is built.</li>
-            <li>external recourses like stylesheets and images haven't been loaded.</li>
-        </ol>
-        <li>load</li>
-        <ol>
-            <li>HTML and external resources are both fully loaded.</li>
-        </ol>
+  
 
-    </ol></h3>
+    
+    <h1>JS Events</h1>
+        <h1><li>Page Load Events</li></h1>
+            <p>
+                <h2>What events occur in sequence when you open a webpage?</h2>
+                <h3><ol>
+                    <li>DOMContentLoaded: </li>
+                    <ol>
+                        <li>HTML is fully loaded.</li>
+                        <li>DOM tree is built.</li>
+                        <li>external recourses like stylesheets and images haven't been loaded.</li>
+                    </ol>
+                    <li>load</li>
+                    <ol>
+                        <li>HTML and external resources are both fully loaded.</li>
+                    </ol>
+            
+                </ol></h3>
+            
+                <h2>What events fire in sequence when you leave a page?</h2>
+                <h3><ol>
+                    <li>beforeunload</li>
+                    <ol>
+                        <li>Beforeunload fires before the page and recourses are unloaded</li>
+                        <li>Beforeunload can be used to show confirmation dialog to confirm if the user wants to leave the page.</li>
+                        <li>How does beforeunload prevent data loss?</li>
+                        <ol>
+                            <li>user accidentally clicks a link while filling out a form.</li>
+                        </ol>
+                    </ol>
+                    <li>unload</li>
+                    <ol>
+                        <li>Unload fires when the page has completely unloaded.</li>
+                        <li>Unload can be used to:</li>
+                        <ol>
+                            <li>Send analytic data</li>
+                            <li>Clean up resources</li>
+                        </ol>
+                    </ol>
+            
+                </ol></h3>
+            
+                <h2>
+                    <code>
+                        document.addEventListener("load", () => {
+                            console.log("document load");
+                        });
+                    </code>
+                    Does "load" event work with document object? Why
+                </h2>
+                <h3>
+                    <li>No. "load" event work with window object instead of document object.</li>
+                    <li>Use <code>window.addEventListener("load", function)</code> instead</li>
+                    <li>"DOMContentLoaded" can work with either window or document object.</li>
+                </h3>
+            
+            </p>
+        <h1><li>Mouse Events</li></h1>
+            <p>
+                <h2>What are some mouse events?</h2>
+                <h3><ol>
+                    <li>mousedown, mouseup and click events</li>
+                    <li>dblclick event: </li>
+                        <ul>
+                            <li>mousedown, mouseup and click</li>
+                            <li>mousedown, mouseup and click</li>
+                            <li>dblclick</li>
+                        </ul>
+                    <li>mousemove</li>
+                        <ul>
+                            <li>mousemove event fires repeatedly whenever you move mouse cursor around an element.</li>
+                            <li>mousemove event fires many times per second as the mouse is moved around, even if it's just by 1px.</li>
+                            <li>What problem does mousemove cause?</li>
+                                <ul>
+                                    <li>mousemove may lead to performance issue if the event handler function is complex.</li>
+                                    <li>Solution: 
+                                        <ul>
+                                            <li>add <code>element.onmousemove = mouseMoveEventHandler;</code> when needed
+                                            </li>
+                                            <li>remove mouseMoveEventHandler when no longer needed 
+                                                <code>element.onmousemove = null;</code>
+                                            </li>
+                                        </ul>
 
-    <h2>What events fire in sequence when you leave a page?</h2>
-    <h3><ol>
-        <li>beforeunload</li>
-        <ol>
-            <li>Beforeunload fires before the page and recourses are unloaded</li>
-            <li>Beforeunload can be used to show confirmation dialog to confirm if the user wants to leave the page.</li>
-            <li>How does beforeunload prevent data loss?</li>
-            <ol>
-                <li>user accidentally clicks a link while filling out a form.</li>
-            </ol>
-        </ol>
-        <li>unload</li>
-        <ol>
-            <li>Unload fires when the page has completely unloaded.</li>
-            <li>Unload can be used to:</li>
-            <ol>
-                <li>Send analytic data</li>
-                <li>Clean up resources</li>
-            </ol>
-        </ol>
+                                    </li>
+                                    
+                                </ul>
+                        </ul>
+                    <li>mouseover & mouseout</li>
+                    <h3><ul>
+                        <li>Mouseover fires when the mouse cursor is outside of the element or any of its descendants and then moves inside the boundaries of the element.</li>
+                        <li>Mouseout fires when the mouse cursor is over an element or any of its descendants and then moves to another element.</li>
+                        <li>Mouse over and out bubble up.</li>
+                    </ul></h3>
 
-    </ol></h3>
+                    <li>mouseenter & mouseleave</li>
+                    <h3><ul>
+                        <li>Mouse enter and leave fire up with the cursor enter or leave the element (not the descendants)</li>
+                        <li>Mouse enter and leave do not fire up.</li>
+                    </ul></h3>
 
-    <h2>
-        <code>
-            document.addEventListener("load", () => {
-                console.log("document load");
-            });
-        </code>
-        Does "load" event work with document object? Why
-    </h2>
-    <h3>
-        <li>No. "load" event work with window object instead of document object.</li>
-        <li>Use <code>window.addEventListener("load", function)</code> instead</li>
-        <li>"DOMContentLoaded" can work with either window or document object.</li>
-    </h3>
+                    <li>Mnemonics</li>
+                    <h3><ul>
+                        <li>Over and Out Overflow: Remember "over" and "out" like overflowing water, they spill over to parents (bubble up). Enter and leave are contained within the element itself.</li>
+                    </ul></h3>
 
-    <h2>What are some mouse events?</h2>
-    <h3><ol>
-        <li>mousedown, mouseup and click events</li>
-        <li>dblclick event: </li>
-            <ul>
-                <li>mousedown, mouseup and click</li>
-                <li>mousedown, mouseup and click</li>
-                <li>dblclick</li>
-            </ul>
-        <li>mousemove</li>
-            <ul>
-                <li>mousemove event fires repeatedly whenever you move mouse cursor around an element.</li>
-                <li>mousemove event fires many times per second as the mouse is moved around, even if it's just by 1px.</li>
-                <li>What problem does mousemove cause?</li>
+                    <li>What does it mean to register a mouse events?
+                        <ul>
+                            <li>It means to tell the browswer to 
+                                keep an eye for a particular type of interaction
+                                and to execute a specific action (callback) when
+                                that interaction occurs.
+                            </li>
+                        </ul>
+
+                    </li>
+                </ol></h3>
+
+                <h2>What mouse buttons do 0, 1, 2, 3, 4 represent respectively?</h2>
+                <h3><ol>
+                    <li>0: main mouse button - usually the left button</li>
+                    <li>1: auxiliary button - usually middle / wheel button</li>
+                    <li>2: secondary button - usually the right button</li>
+                    <li>3: fourth button - usually the browser back button</li>
+                    <li>4: fifth button - usually the browser forward button</li>
+                </ol></h3>
+
+                <h2>Modifier Keys</h2>
+                <ul>
+                    <h2>What are modifier keys?</h2>
+                    <h3>SCAM<ul>
+                        <li>Shift</li>
+                        <li>Control</li>
+                        <li>Alt</li>
+                        <li>Meta</li>
+                    </ul></h3>
+                    <h2>What is meta key?</h2>
+                    <h3>Meta key is the Command key on Mac and Windows key on Windows.</h3>
+                    <h2>What are 4 boolean properties even objects have to show whether SCAM keys are pressed?</h2>
+                    <ol><h3>
+                        <li>shiftKey</li>
+                        <li>ctrlKey</li>
+                        <li>altKey</li>
+                        <li>metaKey</li>
+                    </h3></ol>
+                </ul>
+
+                <h2>Getting Screen Coordinates</h2>
+                <ul><h3>
+                    <li>What do screenX and screenY return?</li>
+                        <ul>
+                            <li>ScreenX: horizontal coordinate of the mouse pointer in (entire monitor) screen coordinates</li>
+                            <li>ScreenY: vertical coordinate of the mouse pointer</li>
+                        </ul>
+                    <li>What do clientX and clientY return?</li>
                     <ul>
-                        <li>mousemove may lead to performance issue if the event handler function is complex.</li>
-                        <li>Solution: 
-                            <ul>
-                                <li>add <code>element.onmousemove = mouseMoveEventHandler;</code> when needed
-                                </li>
-                                <li>remove mouseMoveEventHandler when no longer needed 
-                                    <code>element.onmousemove = null;</code>
-                                </li>
-                            </ul>
-
+                        <li>clientX: horizontal coordinate within the application's client area (the window)
+                            at which the mouse event occurred
                         </li>
-                        
+                        <li>clientY: vertical coordinate of such</li>
                     </ul>
-            </ul>
-        <li>mouseover & mouseout</li>
-        <h3><ul>
-            <li>Mouseover fires when the mouse cursor is outside of the element or any of its descendants and then moves inside the boundaries of the element.</li>
-            <li>Mouseout fires when the mouse cursor is over an element or any of its descendants and then moves to another element.</li>
-            <li>Mouse over and out bubble up.</li>
-        </ul></h3>
 
-        <li>mouseenter & mouseleave</li>
-        <h3><ul>
-            <li>Mouse enter and leave fire up with the cursor enter or leave the element (not the descendants)</li>
-            <li>Mouse enter and leave do not fire up.</li>
-        </ul></h3>
+                </h3> </ul>
+            </p>
+        <h1><li>Keyboard Events</li></h1>
+            
+        <h1><li>Event Delegation</li></h1>
+        <h1><li>The dispatchEvent Method</li></h1>
+        <h1><li>Custom Events</li></h1>
 
-        <li>Mnemonics</li>
-        <h3><ul>
-            <li>Over and Out Overflow: Remember "over" and "out" like overflowing water, they spill over to parents (bubble up). Enter and leave are contained within the element itself.</li>
-        </ul></h3>
 
-        <li>What does it mean to register a mouse events?
-            <ul>
-                <li>It means to tell the browswer to 
-                    keep an eye for a particular type of interaction
-                    and to execute a specific action (callback) when
-                    that interaction occurs.
-                </li>
-            </ul>
 
-        </li>
-    </ol></h3>
-
-    <h2>What mouse buttons do 0, 1, 2, 3, 4 represent respectively?</h2>
-    <h3><ol>
-        <li>0: main mouse button - usually the left button</li>
-        <li>1: auxiliary button - usually middle / wheel button</li>
-        <li>2: secondary button - usually the right button</li>
-        <li>3: fourth button - usually the browser back button</li>
-        <li>4: fifth button - usually the browser forward button</li>
-    </ol></h3>
 
     <div class="content-container">
 

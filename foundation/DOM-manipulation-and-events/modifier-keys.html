@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Modifier Keys Demo</title>
+</head>
+<body>
+    <button id="btnKeys">Click me with Alt, Shift, Ctrl pressed</button>
+    <p id="messageKeys"></p>
+
+    <script>
+        let btnKeys = document.querySelector('#btnKeys');
+        
+        // Disable context menu on right-click
+        btnKeys.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+        });
+
+        // Detect click with modifier keys
+        btnKeys.addEventListener('click', (e) => {
+            let keys = [];
+            switch (true){
+                case e.shiftKey:
+                    keys.push("shiftKey");
+                    break;
+                case e.ctrlKey:
+                    keys.push("ctrlKey");
+                    break;
+                case e.altKey:
+                    keys.push("altKey");
+                    break;
+                case e.metaKey:
+                    keys.push("metaKey");
+                    break;
+            }
+
+
+            let msg = document.querySelector('#messageKeys');
+            msg.textContent = `Keys: ${keys.join('+')}`;
+        });
+    </script>
+</body>
+</html>
