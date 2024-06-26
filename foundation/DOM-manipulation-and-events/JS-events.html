@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Event Demo</title>
+</head>
+<body>
+    <div id="container">
+        <button id='btn'>Click Me!</button>
+        <a href="https://www.javascripttutorial.net/javascript-dom/javascript-events/">link</a>
+    </div>
+    <script>
+        let btn = document.querySelector("#btn");
+        btn.addEventListener('click', function(event){
+            console.log("the button was clicked");
+            event.stopPropagation();
+        });
+        document.body.addEventListener("click", function(event){
+            console.log("The body was clicked!");
+        });
+        
+    </script>
+</body>

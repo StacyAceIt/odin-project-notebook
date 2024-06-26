@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Mouse Events - Button Demo</title>
+</head>
+<body>
+    <button id="btn">Click me with any mouse button: left, right, middle, ...</button>
+    <p id="message"></p>
+    <script>
+        let btn = document.querySelector("#btn");
+        btn.addEventListener("contextmenu", (e) => {
+            e.preventDefault();
+        });
+        btn.addEventListener("mouseup", (e) => {
+            let msg = document.querySelector("#message");
+            switch (e.button){
+                case 0:
+                    msg.textContent = "left";
+                    break;
+                case 1:
+                    msg.textContent = "middle";
+                    break;
+                case 2:
+                    msg.textContent = "right";
+                    break;
+                default:
+                    msg.textContent = `unknow button code: ${e.button}`;
+                    break;
+                
+            }
+        }
+
+        );
+    </script>
+</body>
+</html>
