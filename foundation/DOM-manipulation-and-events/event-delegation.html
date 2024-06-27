@@ -7,7 +7,7 @@
 </head>
 <body>
     <ul id="menu">
-        <li id="home"><a>home</a><span></span></li>
+        <li><a id="home">home</a><span></span></li>
         <li><a id="dashboard">Dashboard</a><span></span></li>
         <li><a id="report">report</a><span></span></li>
     </ul>
@@ -16,17 +16,7 @@
         let span = document.querySelector("span");
         menu.addEventListener("click", (event) => {
             let target = event.target;
-            switch(target.id){
-                case "home":
-                    span.textContent = target.outerHTML;
-                    break;
-                case "dashboard":
-                    span.textContent = target.innerHTML;
-                    break;
-                case "report":
-                    span.textContent = target.textContent;
-                    break;
-            }
+            span.textContent = target.id;
         })
 
     </script>

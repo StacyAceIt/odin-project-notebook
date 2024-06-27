@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h3 {
+            font-weight: bold;
+        }
+        .content-container,
+        .content-container2 {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; /* Ensures that the children are stacked vertically */
+          align-items: center; /* Centers the items horizontally */
+        }
+        img {
+          max-width: 80%; /* Makes the image responsive */
+          height: auto; /* Maintains the aspect ratio */
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; /* Adjusts the width for smaller screens */
+            }
+            img {
+                max-width: 80%; /* Adjusts image size for smaller screens */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>revisiting-rock-paper-scissors</title>
+</head>
+<body>
+    <div class="content-container">
+        <h1>revisiting-rock-paper-scissors</h1>
+        <h3>Date: Jun 27, 2024</h3>
+        <li><h1>What are branches in git?</h1></li>    
+        <h3><ul>
+            <li>In Git, branches are pointers to snapshots of your changes. </li>
+            <li>They allow you to work on different parts of a project simultaneously. Each branch can be considered an independent line of development.</li>
+            <li>The master or main branch is typically the default, representing the official project history.</li>
+            <li>Creating a new branch allows you to develop features, fix bugs, or experiment without affecting the main codebase</li>
+            <li>When a branch is ready, you can merge it back into the main branch. This workflow helps manage multiple development efforts efficiently.</li>
+        </ul></h3>
+
+        <li><h1>How to create a new branch?</h1></li>
+        <h3><ul>
+            <li><code>git branch &lt new-branch-name &gt </code></li>
+            <li>to create a new branch and switch to it
+                <code>git checkout -b &lt new-branch-name &gt</code>
+            </li>
+        </ul></h3>
+
+        <h1><li>How to view all of your current branches?</li></h1>
+        <h3><ul>
+            <li>git branch (the one with *asterisk is the current branch)</li>
+            <li>git branch -a (will show details)</li>
+        </ul></h3>
+
+        <h1><li>How to switch to another branch?</li></h1>
+        <h3><code>git checkout &lt branch-name &gt</code></h3>
+
+        <h1><li>How to delete a branch?</li></h1>
+        <h3>if the branch has already been merged into main<code>git branch -d &lt branch-name &gt</code></h3>
+        <h3>if the branch hasn't been merged into main<code>git branch -D &lt branch-name &gt</code></h3>
+
+        <h1><li>What are use cases for branches?</li></h1>
+        <h3><ol>
+            <li>Feature Development: Developers can create branches to work on new features independently without affecting the main codebase. This isolation helps manage incomplete or experimental features.</li>
+            <li>Bug fixes: Branches allow for the quick creation of isolated environments to fix bugs. Once fixed, the changes can be merged back into the main branch.</li>
+            <li>Release Management: Different branches can be used to manage various release versions, such as release-v1.0 or release-v2.0, helping in maintaining and patching old versions while developing new ones.</li>
+            <li>Experimentation: Developers can experiment with new ideas or refactor code in branches without risk to the main project. If the experiment is successful, it can be merged; otherwise, the branch can be discarded.</li>
+            <li>Continuous Integration/Continuous Deployment (CI/CD): Branches are integral to CI/CD workflows, allowing for automated testing and deployment of branches before merging into the main branch.</li>
+            <li>Collaboration: Branches facilitate collaboration among multiple developers, enabling parallel development and easy integration of changes from different team members.</li>
+        </ol></h3>
+
+        <h1><li>How to delete branch from remote repo?</li></h1>
+        <h3><code>git push origin --delete &lt branch-name &gt</code></h3>
+
+    </div>
+
+
+
+
+
+    <div class="content-container">
+
+        <a href="../../index.html">Home</a>
+    </div>
+
+</body>
+</html>
