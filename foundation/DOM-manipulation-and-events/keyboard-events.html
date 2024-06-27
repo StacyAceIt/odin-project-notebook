@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Keyboard Events: Key/Code</title>
+</head>
+<body>
+    <input type="text" id="message" placeholder="Type something and press Enter">
+    <p id="output"></p>
+
+    <script>
+        let textbox = document.getElementById("message");
+        let output = document.getElementById("output");
+
+        let code1;
+        let key1;
+
+        textbox.addEventListener("keydown", (charEvent) => {
+            // Capture key information only if it's not Enter
+            if (charEvent.key !== "Enter") {
+                code1 = charEvent.code;
+                key1 = charEvent.key;
+            }
+        });
+
+        textbox.addEventListener("keydown", (enterEvent) => {
+            if (enterEvent.key === "Enter") {
+                if (textbox.value.trim() !== "") {
+                    output.textContent = `code = ${code1} key = ${key1}`;
+                }
+                textbox.value = "";
+                enterEvent.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
