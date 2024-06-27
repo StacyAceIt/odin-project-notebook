@@ -3,26 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Custom Event Demo</title>
+    <title>JavaScript Custom Event</title>
 </head>
 <body>
-    <div class="note">JS Custom Event Demo</div>
+    <div class="note">JS Custom Event</div>
     <script>
-        function highlight(elem, callback) {
+        function highlight(elem) {
             const bgColor = 'yellow';
             elem.style.backgroundColor = bgColor;
 
-            if (callback && typeof callback === 'function') {
-                callback(elem);
-            }
+            // create the event
+            let event = new CustomEvent('highlight', {
+                detail: {
+                    backgroundColor: bgColor
+                }
+            });
+            // dispatch the event
+            elem.dispatchEvent(event);
         }
 
-        let note = document.querySelector('.note');
+        // Select the div element
+        let div = document.querySelector('.note');
+
+        // Add border style
         function addBorder(elem) {
             elem.style.border = "solid 1px red";
         }
 
-        highlight(note, addBorder);
+        // Listen to the highlight event
+        div.addEventListener('highlight', function (e) {
+            addBorder(this);
+
+            // examine the background
+            console.log(e.detail);
+        });
+
+        // highlight div element
+        highlight(div);
     </script>
 </body>
 </html>
