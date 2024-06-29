@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h3 {
+            font-weight: bold;
+        }
+        .content-container,
+        .content-container2 {
+          width: 800px;  
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column; /* Ensures that the children are stacked vertically */
+          align-items: center; /* Centers the items horizontally */
+        }
+        img {
+          max-width: 80%; /* Makes the image responsive */
+          height: auto; /* Maintains the aspect ratio */
+        }
+        body {
+            font-family: 'Fantasy', Papyrus;
+        }
+        @media (max-width: 600px) {
+            .content-container {
+                width: 95%; /* Adjusts the width for smaller screens */
+            }
+            img {
+                max-width: 80%; /* Adjusts image size for smaller screens */
+            }
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div class="content-container">
+        <h1>Object Basics</h1>
+        <h3>Date: Jun 27, 2024</h3>
+        <li><h1>What are 2 ways to define an empty object in JS?</h1></li>
+        <ol><h3>
+            <li><code>const myObject = {};</code></li>
+            <li><code>const myObject = new Object();</code></li>
+        </h3></ol>
+
+        <li><h1>What does this <code>user[name];</code> returns?</h1></li>
+        <li><h3>It returns undefined. The correct form is <code>user["name"];</code></h3></li>
+
+        <li><h1>What are 2 ways to add/remove/update/access data in an object?</h1></li>
+        <ol><h3>
+            <li>dot notation: <code>obj.single-word-property</code></li>
+            <li>square notation: <code>obj["single/multi-word property with quotation marks"]</code></li>
+            <li>multi-word properties must be quoted and accessed with square notation.</li>
+        </h3></ol>
+        
+        <li><h1>What will be returned here? <code>const person = {}; const a = "a"; person.a;</code></h1></li>
+        <ul>
+            <li><h3>Undefined. To assign a new property with a variable value directly use square bracket instead.</h3></li>
+            <li><h3><code>person[a]</code></h3></li>
+        </ul>
+ 
+
+    </div>
+
+
+
+
+
+    <div class="content-container">
+
+        <a href="../../index.html">Home</a>
+    </div>
+
+</body>
+</html>
