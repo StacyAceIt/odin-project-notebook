@@ -59,7 +59,77 @@
             <li><h3>Undefined. To assign a new property with a variable value directly use square bracket instead.</h3></li>
             <li><h3><code>person[a]</code></h3></li>
         </ul>
- 
+
+        <li><h1>What is the other way to write this method? <code>const person = {introduceSelf: function(){}, }</code></h1></li>
+        <li><h3><code><code>const person = {introduceSelf(){}, }</code></code></h3></li>
+
+        <li><h1>What are 2 ways create an object?</h1></li>
+        <ol><h3>
+            <li>create a function that returns an object </li>
+            <li>use a constructor</li>
+        </h3></ol>
+
+        <li><h1>What is a constructor?</h1></li>
+        <h3>A constructor is a function called using the new keyword.</h3>
+        
+        <li><h1>Array Methods</h1></li>
+        <h2>How to delete an element from an array?</h2>
+        <ol><h3>arr = [0, 1, 2];
+            <li>delete arr[1]; //returns true and leaves an empty spot in the array</li>
+            <li>arr.splice(startIdx, deleteCnt, insertVal1, insertVal2, ...)</li>
+        </h3></ol>
+
+        <h1>What does arr.splice(startIdx, deleteCnt, insertVal1, insertVal2, ...) return?</h1>
+        <h3>Returns the array of removed elements. </h3>
+
+        <h1>Does arr.splice(startIdx, deleteCnt, insertVal1, insertVal2, ...) allow negative indexes?</h1>
+        <h3>Yes.</h3>
+
+        <h1>What does arr.slice(startIdx, exclusiveEndIdx) do?</h1>
+        <h3>It returns a new array copying all the elements from startIdx until exclusiveEndIdx</h3>
+
+        <h1>Does arr.slice(startIdx, exclusiveEndIdx) allow negative indexes?</h1>
+        <h3>Yes.</h3>
+
+        <h1>What does arr.slice() do?</h1>
+        <h3>it creates a copy of arr array.</h3>
+
+        <h1>What kind of arguments does arr.concat(arg1, arg2) allow?</h1>
+        <h3><ol>
+            <li>arrays: arr.concat([3,4])</li>
+            <li>values: arr.concat([3,4], 5,6)</li>
+        </ol></h3>
+
+        <h1>s = "abc" what does s.split() return in JS vs Python?</h1>
+        <ol><h3>
+            <li>the returned values are the same in JS and Python</li>
+            <li>in JS, <code>['abc']</code></li>
+            <li>in Python, <code>['abc']</code></li>
+        </h3></ol>
+
+        <h1>s = "abc" what does s.split("") return in JS vs Python?</h1>
+        <ol><h3>
+            <li>split by empty string turns string into characters in JS but returns error in Python.</li>
+            <li>in JS, <code>['a', 'b', 'c']</code></li>
+            <li>in Python, <code>ERROR</code></li>
+        </h3></ol>
+
+        <h1>If no initialValue is given to arr.reduct(function), what is the initialValue by default?</h1>
+        <h3>The first value in the arr.</h3>
+
+        <h1>What are 3 options when we need to iterate over an array?</h1>
+        <ol><h3>
+            <li>forEach</li>
+            <li>for</li>
+            <li>for ...of</li>
+        </h3></ol>
+
+        <h1>What do we use when we need to iterate and return the data for each element?</h1>
+        <h3><li>map</li></h3>
+
+        <h1>What will happen if we apply reduce method without initial value to an empty array? <code>let arr = [];
+            arr.reduce((sum, current) => sum + current);</code></h1>
+        <h3>Error. It's advised to always specify the initial value.</h3>
 
     </div>
 
