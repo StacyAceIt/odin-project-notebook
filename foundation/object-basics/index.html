@@ -131,6 +131,77 @@
             arr.reduce((sum, current) => sum + current);</code></h1>
         <h3>Error. It's advised to always specify the initial value.</h3>
 
+        <h1>What does these two return?</h1>
+        <code>typeof {}</code>
+        <code>typeof []</code>
+        <h3>both return object. Use Array.isArray([]) //true Array.isArray({}) //false to distinguish arrays and objects</h3>
+
+        <h2>Which functions can use thisArg? What does thisArc become inside function?</h2>
+        <h3><ul>
+            <li>arr.find(func, thisArg)</li>
+            <li>arr.filter(func, thisArc)</li>
+            <li>arr.map(func, thisArc)</li>
+            <li>arr.sort() is the exception</li>
+            <li>The value of thisArg becomes this for func.</li>
+        </ul></h3>
+
+        <h2>What does thisArg equivalent to?</h2>
+        <code>users.filter(army.canJoin, army)</code>
+        <h3>users.filter(user => army.canJoin(user))</h3> 
+
+        <h2>What does this code return?</h2>
+        <code>let soldiers = users.filter(army.canJoin)</code>
+        <code>soldiers[0].age;</code>
+        <h3>this = undefined. It leads to error without thisArg.</h3>
+
+        <h2>Can we use arr.splice() to make a copy of arr?</h2>
+        <h3>No. arr.splice() modifies the original array without returning a new array. arr.slice() can be used to make a copy of the original array.</h3>
+
+        <h2>How to create a copy of arr?</h2>
+        <h3><ol>
+            <code>let newArray = arr.slice()</code>
+            <code>let newArray = [...arr]</code>
+            <code>let newArray = Array.from(arr)</code>
+            <code>let newArray = arr.concat()</code>
+        </ol></h3>
+
+        <h2>What are ways to convert a string to a number in JS?</h2>
+        <h3><ol>
+            <li>Using the Unary Plus (+) Operator: <code>let a = "1"; +a; // 1</code></li>
+            <li>Using the number constructor: <code>let str = "123";
+                let num = Number(str); </code></li>
+            <li>Using parseInt(str, 10) for integers: 
+                <code>let str = "123";
+                let num = parseInt(str, 10);</code></li>
+            <li>Using parseFloat(str) for floating point numbers. <code>
+                let str = "123.45";
+                let num = parseFloat(str);
+            </code></li>
+            <li>Using Math.floor(str), Math.ceil(str),Math.round(str) : <code>
+                let str = "123.45";
+                let numFloor = Math.floor(str); // 123
+                let numCeil = Math.ceil(str);   // 124
+                let numRound = Math.round(str); // 123
+            </code></li>
+        </ol></h3>
+
+        <h2>Why do we need parenthesis to the right side of the arrow function?</h2>
+        <code>
+            let usersMapped = users.map(user => ({
+                fullName: `${user.name} ${user.surname}`,
+                id: user.id
+              }));
+        </code>
+        <h3>This code outputs an array of object. JS identifies left curly bracket as the beginning
+            of a function, not the start of an object. The workout around is to wrap them in the parenthesis.
+        </h3>
+
+        <h2>What's are the input arguments for arr.filter((...inputArgumenets) => )</h2>
+        <ol><h3>
+            <li>value</li>
+            <li>index</li>
+            <li>self</li>
+        </h3></ol>
     </div>
 
 
