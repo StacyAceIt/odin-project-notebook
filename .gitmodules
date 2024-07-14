@@ -1,3 +1,6 @@
 [submodule "rock-paper-scissors"]
 	path = rock-paper-scissors
 	url = https://github.com/StacyAceIt/rock-paper-scissors.git
+[submodule "etch-a-sketch"]
+	path = etch-a-sketch
+	url = https://github.com/StacyAceIt/etch-a-sketch.git
