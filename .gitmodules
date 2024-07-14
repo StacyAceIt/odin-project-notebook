@@ -4,3 +4,6 @@
 [submodule "etch-a-sketch"]
 	path = etch-a-sketch
 	url = https://github.com/StacyAceIt/etch-a-sketch.git
+[submodule "calculator"]
+	path = calculator
+	url = https://github.com/StacyAceIt/calculator.git
