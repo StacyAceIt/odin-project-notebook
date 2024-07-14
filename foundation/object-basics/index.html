@@ -205,6 +205,54 @@
 
         <h2>What's the syntax for arr.reduce()?</h2>
         <h3>arr.reduce((accumulator, currentValue) => accumulator + currentValue, initialValue)</h3>
+
+        <h2>Why do we need square bracket for the object property here?</h2>
+            <code>const propertyName = 'dynamicProperty';
+
+                const obj = {
+                [propertyName]: 'This is a dynamic property'
+                };
+            </code>
+        <h3>The square brackets ([]) in this context are used to create computed property names. This means that the property name is computed dynamically, using the value of the expression inside the brackets.</h3>
+        <h3>There are two ways to create property names:
+            <ol>
+                <li>With string literals</li>
+                <li>With computed values / variables</li>
+            </ol>
+        </h3>
+
+        <h2>What is map method used for? What's its syntax</h2>
+        <h3><ol>
+            <li>arr.map(callBackFunction)</li>
+            <li>The map function in JavaScript is used to create a new array by applying a provided function to each element of the calling array. 
+                </li>
+            <li>It does not modify the original array and instead returns a new array with the results.</li>
+        </ol></h3>
+
+        <h2>What is filter method used for? What's its syntax</h2>
+        <ol><h3>
+            <li>arr.filter(callBackFunction)</li>
+            <li>It takes in the original array</li>
+            <li>The elements that satisfy the condition are copied to the output array.</li>
+            <li>It outputs a new array without changing the original array.</li>
+        </h3></ol>
+
+        <h2>What is reduce method used for? What's its syntax</h2>
+        <ol><h3>
+            <li>arr.reduce(callBackFunction(accumulator, currentValue), initialValue)</li>
+            <li>It execute the reducer function on every elements in the array.</li>
+            <li> resulting in a single output value. </li>
+            <li>It is particularly useful for calculating a single cumulative value from an array of values.</li>
+        </h3></ol>
+
+        <h2>Are objects and arguments passed by value or reference in JS?</h2>
+        <ol><h3>
+            <li>Objects are passed by reference</li>
+            <li>Arguments are passed by value</li>
+        </h3></ol>
+
+        <h2>If a function is called with missing values, the missing value is set to _____ inside the function.</h2>
+        <h3>undefined</h3>
     </div>
 
 
